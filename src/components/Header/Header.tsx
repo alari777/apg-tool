@@ -16,11 +16,11 @@ const Header: FC = () => {
               Home
             </Link>
             <Link
-              data-testid='nav-home'
+              data-testid='nav-wiki'
               className='nav-item nav-link active'
-              href='/about'
+              href='/wiki'
             >
-              About
+              Short wiki
             </Link>
           </div>
         </div>
