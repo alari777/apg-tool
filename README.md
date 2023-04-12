@@ -18,3 +18,36 @@ Project [APG tool application](http://34.145.240.68/) at the custom google insta
 
 APG generates several random passwords. 
 It uses several password generation algorithms (currently two) and a built-in pseudo random number generator.
+
+# <a name="how_to_start">How to start</a>
+
+This public project works at NextJS with TypeScript supporting.  
+
+You have few ways how to run this application:
+- You can open:
+    - Project [APG tool application](http://34.145.240.68/) at my custom google instance.
+      It is custom instance at `google.cloud` where is running docker container with this project inside.  
+      That is a better way to see how this application works.
+- Next way and most easy way is on local machine.  
+  Create a new folder on your local machine and go inside this folder.
+  System Requirements:
+    - [NodeJS](https://nodejs.org/en/).  
+      Open your terminal and type `node --version`.  
+      It has to be 14.6.0 or higher.
+    - `npm` 8.1.2 or higher
+    - `git`
+      Optionally:
+    - `Docker` version 20.10.21 or higher.
+    - `Docker compose` version 2.13.0 or higher.  
+    
+Open terminal in this folder and complete next commands:
+```
+# Clone this repository  
+git clone https://github.com/alari777/apg-tool.git .
+
+# Start servise in development mode   
+docker-compose up -d
+
+# In order to stop application use 
+docker-compose down
+```
