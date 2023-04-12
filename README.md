@@ -1,12 +1,9 @@
 # Table of content
 
-[Getting Started](#getting_started)
-- [Introduction](#introduction)
-
+[Getting Started](#getting_started)  
+- [Introduction](#introduction)  
 [How to start](#how_to_start)  
-[Tests](#tests)  
-[GitHub actions](#github_actions)
-
+[GitHub actions](#github_actions)  
 [In conclusion](#in_conclusion)  
 [Thank you!](#thank_you)
 
@@ -51,3 +48,11 @@ docker-compose up -d
 # In order to stop application use 
 docker-compose down
 ```
+
+# <a name="github_actions">GitHub actions</a>
+
+After creating new `pull request` two GitHub actions: `run_tests` and `push_docker` are run.  
+You can find them in folder `.github/workflows/`:
+- Action `run_tests` runs tests.
+- Action `push_docker` creates Docker image of this project and pushes it in GitHub package.
+  This action depends on `run_tests`.
