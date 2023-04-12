@@ -1,5 +1,6 @@
 import { createHandler, Get, Query } from 'next-api-decorators';
 import { execSync } from 'child_process';
+import { createPasswords } from './helpers/createPasswords';
 
 class FetchApgData {
   // GET /api/v1/apg
@@ -7,18 +8,7 @@ class FetchApgData {
   async callApgTool(
     @Query('params') params: string
   ): Promise<{ data: string[] }> {
-    // console.log(params);
-    const output = execSync(`apg ${params}`, {
-      encoding: 'utf8',
-      maxBuffer: 250 * 1024 * 1024,
-    })
-      .toString()
-      .trim();
-
-    console.log('Output was:\n', output);
-
-    const apgPasswords = output.split('\n');
-
+    const apgPasswords = createPasswords(params);
     return {
       data: apgPasswords,
     };

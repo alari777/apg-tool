@@ -18,7 +18,7 @@ const HomePage: FC = () => {
     setClassSpinner(true);
     setIsApg(false);
     try {
-      const response = await fetch(`/api/v1/apg?params=${apgParameters}`, {
+      const response = await fetch(`/api/v1/apg/apg?params=${apgParameters}`, {
         method: 'GET',
       });
       if (response.status === 200) {

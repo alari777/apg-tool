@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors",
+    "test": "jest --colors"
   },
   "dependencies": {
     "@types/node": "18.15.11",
@@ -26,6 +29,12 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jest-fetch-mock": "^3.0.3",
     "prettier": "^2.8.7"
   }
 }
