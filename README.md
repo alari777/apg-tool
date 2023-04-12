@@ -61,7 +61,7 @@ The second way is via just Docker:
 ```
 # To start docker container based on this image 
 # map port 3000 in the container to port 80 on the Docker host
-# name of container `bird`
+# name of container `apgtool`
 # "-d" flag causes Docker to start the container in "detached" mode
 sudo docker run -p 80:3000 -d  --name apgtool ghcr.io/alari777/apg-tool/apg-tool:latest
 ```
