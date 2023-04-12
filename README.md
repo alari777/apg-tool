@@ -56,3 +56,11 @@ You can find them in folder `.github/workflows/`:
 - Action `run_tests` runs tests.
 - Action `push_docker` creates Docker image of this project and pushes it in GitHub package.
   This action depends on `run_tests`.
+
+
+# <a name="in_conclusion">In conclusion</a>
+
+I want to improve this project:
+- Add e2e testing.
+
+# <a name="thank_you">Thank you!</a>
