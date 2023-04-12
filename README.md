@@ -1,7 +1,8 @@
 # Table of content
 
 [Getting Started](#getting_started)  
-- [Introduction](#introduction)  
+- [Introduction](#introduction) 
+ 
 [How to start](#how_to_start)  
 [GitHub actions](#github_actions)  
 [In conclusion](#in_conclusion)  
@@ -28,10 +29,6 @@ You have few ways how to run this application:
 - Next way and most easy way is on local machine.  
   Create a new folder on your local machine and go inside this folder.
   System Requirements:
-    - [NodeJS](https://nodejs.org/en/).  
-      Open your terminal and type `node --version`.  
-      It has to be 14.6.0 or higher.
-    - `npm` 8.1.2 or higher
     - `git`
       Optionally:
     - `Docker` version 20.10.21 or higher.
