@@ -1,38 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Table of content
 
-## Getting Started
+[Getting Started](#getting_started)  
+- [Introduction](#introduction)  
+[How to start](#how_to_start)  
+[GitHub actions](#github_actions)  
+[In conclusion](#in_conclusion)  
+[Thank you!](#thank_you)
 
-First, run the development server:
+# <a name="getting_started">Getting Started</a>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## <a name="introduction">Introduction</a>
+This is "APG tool" online.  
+Project [APG tool application](http://34.145.240.68/) at the custom google instance.  
+
+APG generates several random passwords. 
+It uses several password generation algorithms (currently two) and a built-in pseudo random number generator.
+
+# <a name="how_to_start">How to start</a>
+
+This public project works at NextJS with TypeScript supporting.  
+
+You have few ways how to run this application:
+- You can open:
+    - Project [APG tool application](http://34.145.240.68/) at my custom google instance.
+      It is custom instance at `google.cloud` where is running docker container with this project inside.  
+      That is a better way to see how this application works.
+- Next way and most easy way is on local machine.  
+  Create a new folder on your local machine and go inside this folder.
+  System Requirements:
+    - [NodeJS](https://nodejs.org/en/).  
+      Open your terminal and type `node --version`.  
+      It has to be 14.6.0 or higher.
+    - `npm` 8.1.2 or higher
+    - `git`
+      Optionally:
+    - `Docker` version 20.10.21 or higher.
+    - `Docker compose` version 2.13.0 or higher.  
+    
+Open terminal in this folder and complete next commands:
+```
+# Clone this repository  
+git clone https://github.com/alari777/apg-tool.git .
+
+# Start servise in development mode   
+docker-compose up -d
+
+# In order to stop application use 
+docker-compose down
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# <a name="github_actions">GitHub actions</a>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+After creating new `pull request` two GitHub actions: `run_tests` and `push_docker` are run.  
+You can find them in folder `.github/workflows/`:
+- Action `run_tests` runs tests.
+- Action `push_docker` creates Docker image of this project and pushes it in GitHub package.
+  This action depends on `run_tests`.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# <a name="in_conclusion">In conclusion</a>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+I want to improve this project:
+- Add e2e testing.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# <a name="thank_you">Thank you!</a>
