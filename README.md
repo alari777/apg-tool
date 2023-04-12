@@ -56,6 +56,18 @@ docker-compose up -d
 docker-compose down
 ```
 
+
+The second way is via just Docker:
+```
+# To start docker container based on this image 
+# map port 3000 in the container to port 80 on the Docker host
+# name of container `bird`
+# "-d" flag causes Docker to start the container in "detached" mode
+sudo docker run -p 80:3000 -d  --name apgtool ghcr.io/alari777/apg-tool/apg-tool:latest
+```
+
+
+
 # <a name="github_actions">GitHub actions</a>
 
 After creating new `pull request` two GitHub actions: `run_tests` and `push_docker` are run.  
