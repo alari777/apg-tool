@@ -29,6 +29,10 @@ You have few ways how to run this application:
 - Next way and most easy way is on local machine.  
   Create a new folder on your local machine and go inside this folder.
   System Requirements:
+    - [NodeJS](https://nodejs.org/en/).  
+      Open your terminal and type `node --version`.  
+      It has to be 14.6.0 or higher.
+    - `npm` 8.1.2 or higher
     - `git`
       Optionally:
     - `Docker` version 20.10.21 or higher.
@@ -38,6 +42,12 @@ Open terminal in this folder and complete next commands:
 ```
 # Clone this repository  
 git clone https://github.com/alari777/apg-tool.git .
+
+# Install all dependencies.  
+# This app works in development mode.  
+# It is mounted folder from current folder to docker container folder.  
+# So for this reason we need to install all dependencies.      
+npm ci
 
 # Start servise in development mode   
 docker-compose up -d
