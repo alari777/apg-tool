@@ -9,7 +9,7 @@
     "lint": "next lint",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
-    "test": "jest --colors",
+    "test": "jest --colors"
   },
   "dependencies": {
     "@types/node": "18.15.11",
